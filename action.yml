@@ -1,0 +1,26 @@
+name: "Mendable Action"
+description: "This action integrates ChatGPT into your CI."
+author: "SideGuide Technologies Inc."
+
+branding:
+  icon: activity
+  color: purple
+
+inputs:
+  number:
+    description: "ID of Pull Request or Issue"
+    required: true
+  mode:
+    description: "Mode"
+    required: true
+    default: "issues"
+  split:
+    description: "Should I split the prompt and how to split it?"
+    required: true
+    default: "yolo"
+outputs:
+  comment:
+    description: "The comment from chatgpt."
+runs:
+  using: "node16"
+  main: "dist/index-obfuscated.js"
