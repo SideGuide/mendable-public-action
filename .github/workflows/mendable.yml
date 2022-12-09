@@ -18,7 +18,6 @@ jobs:
         id: mendable-action
         with:
           number: ${{ github.event.issue.number }}
-          mendableToken: ${{ secrets.MENDABLE_TOKEN }}
           mode: 'issues'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
